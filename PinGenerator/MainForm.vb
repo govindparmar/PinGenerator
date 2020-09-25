@@ -6,13 +6,11 @@ Public Class MainForm
     Dim seen = New Byte() {0, 0, 0, 0, 0, 0, 0, 0, 0}
 
     Private Function IsFinished() As Boolean
-
         For i As Byte = 0 To 8
             If seen(i) = 0 Then
                 Return False
             End If
         Next
-
         Return True
     End Function
 
@@ -32,7 +30,6 @@ Public Class MainForm
                     seen(rngByte(0) - 1) = 1
                     sb.Append(rngByte(0).ToString)
                 End If
-
             End While
 
             txtPin.Text = sb.ToString
